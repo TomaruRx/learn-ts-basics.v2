@@ -22,3 +22,10 @@ test("上限より大きい4は無効", () => {
 test("範囲内でも小数の1.5は無効", () => {
     expect(isValidPriority(1.5)).toBe(false);
 });
+test("負の優先度は無効", () => {
+    expect(isValidPriority(-1)).toBe(false);
+});
+
+test("上限より少し大きい小数も無効", () => {
+    expect(isValidPriority(3.1)).toBe(false);
+});

@@ -32,3 +32,6 @@ const todo = {
 console.log(`Todo 1 => ${todo.name}（優先度:${todo.priority}）`);
 
 console.log(JSON.stringify(todo, null, 2));
+
+const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+console.log(`Timezone: ${timeZone}`);

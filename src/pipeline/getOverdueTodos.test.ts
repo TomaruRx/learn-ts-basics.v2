@@ -1,7 +1,7 @@
 // src/pipeline/getOverdueTodos.test.ts
 import { expect, test } from "vitest";
 import type { Todo } from "./types.js";
-import { getOverdueTodos } from "./getOverdueTodos.js";
+import { getOverdueTodos } from "./getOverdueTodosReuse.js";
 
 test("未完了かつ期限を過ぎたTodoだけを抽出する", () => {
     const now = new Date(2026, 9, 22, 12, 0);

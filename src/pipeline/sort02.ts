@@ -1,5 +1,6 @@
 import type { Todo } from "./types.js";
 import { initTodos } from "./initTodos.js";
+import { sortByPriorityAndDeadline } from "./sortTodos.js";
 
 const sortedTodos: Todo[] = [...initTodos].sort((a, b) => {
     if (a.isDone !== b.isDone) {
@@ -19,3 +20,4 @@ const sortedTodos: Todo[] = [...initTodos].sort((a, b) => {
 
 console.log(JSON.stringify(initTodos, null, 2));
 console.log(JSON.stringify(sortedTodos, null, 2));
+console.log(JSON.stringify(sortByPriorityAndDeadline(initTodos), null, 2));
